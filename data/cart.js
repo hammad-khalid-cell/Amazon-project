@@ -17,10 +17,10 @@ export let cart = [
 ];
 
 
-export function addToCart(producdId) {
+export function addToCart(productId) {
   let matchingItem;
   cart.forEach((cartitem) => {
-    if (producdId === cartitem.producdId) {
+    if (productId === cartitem.productId) {
       matchingItem = cartitem;
     }
 
@@ -32,7 +32,7 @@ export function addToCart(producdId) {
   else {
 
     cart.push({
-      producdId: producdId,
+      productId: productId,
       quantity: 1,
     });
   }
