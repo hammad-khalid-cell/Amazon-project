@@ -21,11 +21,12 @@ export function saveToStorage(){
 }
 
 
-export function addToCart(productId) {
+export function addToCart(productId, quantity) {
   let matchingItem;
   cart.forEach((cartitem) => {
     if (productId === cartitem.productId) {
       matchingItem = cartitem;
+
     }
 
   })
@@ -37,7 +38,7 @@ export function addToCart(productId) {
 
     cart.push({
       productId: productId,
-      quantity: 1,
+      quantity: quantity,
       deliveryOptionId : '1'
     });
   }

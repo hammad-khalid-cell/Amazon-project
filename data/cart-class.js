@@ -73,6 +73,6 @@ class Cart {
 const cart = new Cart('cart-oop');
 const BuisnessCart = new Cart('Buisness-cart');
 
- BuisnessCart.#loadFromStorage();
+ 
 console.log(cart);
 console.log(BuisnessCart);
