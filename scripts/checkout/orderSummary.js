@@ -7,14 +7,12 @@ import { renderPaymentSummary } from "./paymentSummary.js";
 
 const today = dayjs();
 const deliveryDate = today.add(7, 'days');
-console.log(deliveryDate.format('dddd, MMMM, D'))
 
 export function renderOrderSummary(){
 
   let cartHTML = '';
   cart.forEach((cartItem) => {
   
-    console.log(cartItem);
   
     const productId = cartItem.productId;
   
@@ -25,7 +23,6 @@ export function renderOrderSummary(){
      
   
     const deliveryOption  = getDeliveryOption(deliveryOptionId);
-    console.log(deliveryOption);
   
     const today = dayjs();
     const deliveryDate = today.add(deliveryOption.deliveryDays, 'days');
